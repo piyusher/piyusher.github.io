@@ -1,5 +1,5 @@
 /* reset */
-body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
+ .botDiv { -webkit-animation: bounce 1s infinite; -moz-animation: bounce 1s infinite;     -o-animation: bounce 1s infinite;    animation: bounce 1s 2s infinite; } body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   font-family: "Segoe UI", sans-serif;
   font-size: 15px; }
 

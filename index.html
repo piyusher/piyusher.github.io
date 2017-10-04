@@ -346,7 +346,7 @@ _________________________________________________________ -->
 
 
     </div>
-     <div id='botDiv' style='height: 38px; width:350px; position: fixed; bottom: 0; right:0; z-index: 1000; background-color: #fff'>
+     <div id='botDiv' class="botDiv" style='height: 38px; width:350px; position: fixed; bottom: 0; right:0; z-index: 1000; background-color: #fff'>
          	    <div id="bot"/>
      </div>
     <!-- /#all -->
@@ -385,7 +385,7 @@ _________________________________________________________ -->
                 user: 'You'
       });
       botConnection
-        .postActivity({ type: "ConversationUpdate", value: "",from: { id: "you" }, name: "ConversationUpdate" })
+        .postActivity({ type: "ConversationUpdate", value: "", from: { id: "you" }, name: "ConversationUpdate" })
         .subscribe(id => console.log("success"));
     
       BotChat.App({
@@ -397,8 +397,10 @@ _________________________________________________________ -->
     
      $(document).ready(function () {
       $(".wc-header").css("cursor","pointer").click(function(elem){
-            var botDiv = document.querySelector('#botDiv'); 
-            botDiv.style.height = botDiv.style.height == '400px' ? '38px' : '400px';
+            var botDiv = $('#botDiv');
+            botDiv.removeClass("botDiv");
+            var divHeight = botDiv.height() == '400' ? '38px' : '400px';
+            botDiv.height(divHeight);
       });
     });
       
