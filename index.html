@@ -346,7 +346,7 @@ _________________________________________________________ -->
 
 
     </div>
-     <div id='botDiv' style='height: 38px;width:400px; position: fixed; bottom: 0; right:0; z-index: 1000; background-color: #fff'>
+     <div id='botDiv' style='height: 38px; width:350px; position: fixed; bottom: 0; right:0; z-index: 1000; background-color: #fff'>
          	    <div id="bot"/>
      </div>
     <!-- /#all -->
@@ -385,7 +385,7 @@ _________________________________________________________ -->
                 user: 'You'
       });
       botConnection
-        .postActivity({ type: "event", value: "conversationUpdate", from: { id: "me" }, name: "conversationUpdate" })
+        .postActivity({ type: "ConversationUpdate", value: "",from: { id: "you" }, name: "ConversationUpdate" })
         .subscribe(id => console.log("success"));
     
       BotChat.App({
