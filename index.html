@@ -346,7 +346,9 @@ _________________________________________________________ -->
 
 
     </div>
-    <div id="bot"/>
+     <div id='botDiv' style='height: 38px;width:400px; position: fixed; bottom: 0; right:0; z-index: 1000; background-color: #fff'>
+         	    <div id="bot"/>
+     </div>
     <!-- /#all -->
 
     <!-- #### JAVASCRIPT FILES ### -->
@@ -376,22 +378,32 @@ _________________________________________________________ -->
 
     
     <script src="js/front.js"></script>
-    <script type="text/javascript">
-
-    (function () {
-    var div = document.createElement("div");
-    document.getElementsByTagName('body')[0].appendChild(div);
-    div.outerHTML = "<div id='botDiv' style='height: 38px; position: fixed; bottom: 0; right:0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height:38px; width: 400px; position:fixed; cursor: pointer;'></div><iframe width='400px' height='400px' src='https://webchat.botframework.com/embed/PK_Bot1?s=1KrW-BjmdBc.cwA.XbU.9uXfkEFBvICFFefWXmM0Zh6_rbXpswI7bNRI74vIr6w'></iframe></div>"; 
-
-    document.querySelector('body').addEventListener('click', function (e) {
-        e.target.matches = e.target.matches || e.target.msMatchesSelector;
-        if (e.target.matches('#botTitleBar')) { 
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+    <script>
+      var botConnection = new BotChat.DirectLine({
+                secret: '_mGUcUytOtg.cwA.1i4.Y2g1GfeyUDD2yPN8NCsO2VZk3UVIQflmL-3MgNmJxsI',
+                user: 'You'
+      });
+      botConnection
+        .postActivity({ type: "event", value: "conversationUpdate", from: { id: "me" }, name: "conversationUpdate" })
+        .subscribe(id => console.log("success"));
+    
+      BotChat.App({
+        botConnection: botConnection,
+        user: { id: 'you' },
+        bot: { id: 'PK_Bot1' },
+        resize: 'detect'
+      }, document.getElementById("bot"));
+    
+     $(document).ready(function () {
+      $(".wc-header").css("cursor","pointer").click(function(elem){
             var botDiv = document.querySelector('#botDiv'); 
             botDiv.style.height = botDiv.style.height == '400px' ? '38px' : '400px';
-        };
+      });
     });
-}());
-</script>
+      
+
+    </script>
     
 
 
