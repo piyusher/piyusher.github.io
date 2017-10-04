@@ -396,11 +396,19 @@ _________________________________________________________ -->
       }, document.getElementById("bot"));
     
      $(document).ready(function () {
+      $(".wc-shellinput").blur();
       $(".wc-header").css("cursor","pointer").click(function(elem){
             var botDiv = $('#botDiv');
             botDiv.removeClass("botDiv");
             var divHeight = botDiv.height() == '400' ? '38px' : '400px';
             botDiv.height(divHeight);
+            if(divHeight == "38px") {
+               $(".wc-shellinput").blur();
+            }
+            else {
+               $(".wc-shellinput").focus();                   
+            }
+
       });
     });
       
