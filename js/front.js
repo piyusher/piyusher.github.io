@@ -81,7 +81,7 @@ function animations() {
 	delayTime = 0;
 	$('[data-animate]').css({opacity: '0'});
 	$('[data-animate]').waypoint(function (direction) {
-	    delayTime += 150;
+	    delayTime += 1;
 	    $(this).delay(delayTime).queue(function (next) {
 		$(this).toggleClass('animated');
 		$(this).toggleClass($(this).data('animate'));
