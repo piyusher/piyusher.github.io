@@ -381,22 +381,22 @@ WORKS / REFERENCES
 }
 .reference-item {
   width: 255px;
-  overflow: hidden;
+  overflow: hidden; margin-bottom:30px; 
 }
 @media (max-width: 1199px) {
   .reference-item {
     width: 205px;
-  }
+ margin-bottom:30px; }
 }
 @media (max-width: 991px) {
   .reference-item {
-    width: 300px;
+    width: 300px; margin-bottom:30px;
   }
 }
 @media (max-width: 350px) {
   .reference-item {
-    width: 260px;
-  }
+    width: 260px; 
+margin-bottom:30px;  }
 }
 .reference-item .reference {
   margin-bottom: 30px;
