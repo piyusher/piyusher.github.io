@@ -1,0 +1,24 @@
+{
+  "name": "piyushkhanna-portfolio",
+  "version": "1.0.0",
+  "description": "Piyush Khanna's portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyusher/piyusher.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "fullstack"
+  ],
+  "author": "Piyush Khanna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/piyusher/piyusher.github.io/issues"
+  },
+  "homepage": "https://piyushkhanna.com"
+}
